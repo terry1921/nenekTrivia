@@ -1,0 +1,72 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">Nenek Trivia</string>
+    <string name="title_honor">Cuadro de honor</string>
+
+    <!-- fbid -->
+    <string name="facebook_app_id" translatable="false">352943965179928</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb352943965179928</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY" translatable="false">pbRKZY8mBZ6qaSky7KtBtmE2H</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET" translatable="false">Vm7jiJm94l8PvwQo4lR1hAFjI0gMJSTixmgRUMNJOMLWbF9TuN</string>
+
+    <!-- admob -->
+    <string name="admob_app_id" translatable="false">ca-app-pub-1687280188907332~9168268035</string>
+    <string name="admob_banner_id_debug" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+
+    <!-- error login api -->
+    <string name="error_login_fb" tools:ignore="Typos">"Ocurrió un error al ingresar con Facebook\n Espere un momento e intente de nuevo."</string>
+    <string name="error_login_tw" tools:ignore="Typos">"Ocurrió un error al ingresar con Twitter\n Espere un momento e intente de nuevo."</string>
+
+    <string name="menu_profile">MI PERFIL</string>
+    <string name="menu_home">INICIO</string>
+    <string name="menu_honor">CUADRO DE HONOR</string>
+    <string name="menu_promotions">PROMOCIONES</string>
+    <string name="menu_help">AYUDA</string>
+    <string name="menu_exit">SALIR</string>
+    <string name="menu_back">REGRESAR</string>
+
+    <!-- dummys -->
+    <string name="dummy" translatable="false"> --- --- --- </string>
+    <string name="dummy_place" translatable="false">1 lugar</string>
+    <string name="dummy_points" translatable="false">22 pts</string>
+    <string name="dummy_username" translatable="false">Nombre de usuario a desplegar</string>
+    <string name="dummy_mail" translatable="false">usuario@correo.com.mx</string>
+    <string name="dummy_answer" translatable="false">Esta es la respuesta que tengo para ti despues isadoias dasids dsoids oidsai odsaoidsaiodsio sad iodsa</string>
+    <string name="dummy_question" translatable="false">Cargando pregunta… </string>
+    <string name="dummy_zero" translatable="false">00</string>
+    <string name="dummy_title" translatable="false">Titulo</string>
+    <string name="dummy_content" translatable="false">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi aperiam culpa cum deleniti dolorem fugiat inventore maxime minima nisi pariatur provident quam, similique sit tempore tenetur vel veritatis voluptates!</string>
+    <string name="navigation_drawer_open" translatable="false">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close Navigation Drawer</string>
+
+    <string name="title_game">Preguntas</string>
+    <string name="title_promotions">Promociones</string>
+    <string name="title_help">Ayuda</string>
+    <string name="title_lose">¡Has perdido!</string>
+    <string name="title_profile">Perfil</string>
+
+    <string name="login">Acceder</string>
+    <string name="trophy">Trofeo</string>
+    <string name="home_button_play">Jugar</string>
+    <string name="label_best_points">Mayor puntaje</string>
+    <string name="warning_exit">Aviso</string>
+    <string name="content_exit">"¿Está seguro que desea salir del juego?\nLos datos no se guardarán."</string>
+    <string name="error_load_data">Ocurrió un error al cargar los datos.</string>
+    <string name="correct">Correcto</string>
+    <string name="incorrect">Incorrecto</string>
+    <string name="end_game_text">No hay mas preguntas disponibles, espera nuestra actualización o comienza un nuevo juego</string>
+    <string name="under_construction">En construcción</string>
+    <string name="point_gain_1">Has obtenido</string>
+    <string name="point_gain_2">puntos</string>
+    <string name="next_question">Siguiente pregunta</string>
+
+    <!-- no connection -->
+    <string name="no_connection_title">Sin conexión a Internet</string>
+    <string name="no_connection_content">"No estás conectado a internet.\nAsegúrate de que WI-FI esté encendido,\nel modo Avión esté apagado y vuelve a intentarlo."</string>
+    <string name="no_content_title">No hay contenido disponible</string>
+    <string name="no_content_content" tools:ignore="Typos">"Por el momento no hay contenido disponible,\npronto se agregará."</string>
+    <string name="place">lugar</string>
+    <string name="play_again">Volver a jugar</string>
+    <string name="exit_dialog">Salir</string>
+
+</resources>

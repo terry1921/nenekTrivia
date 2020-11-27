@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/pink</color>
+    <color name="colorPrimaryDark">@color/pinkDark</color>
+
+    <color name="colorAccent">@color/orange</color>
+    <color name="colorAccentPressed">@color/orangeDark</color>
+
+    <!--<color name="colorAccent">#FF4081</color>
+    <color name="colorAccentPressed">#d81b60</color>-->
+
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#727272</color>
+
+    <color name="text">#FFFFFF</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+    <color name="colorControlNormal">@color/textColorSecondary</color>
+    <color name="colorControlActivated">@color/colorAccent</color>
+    <color name="colorControlHighlight">@color/divider</color>
+
+    <color name="colorButtonNormal">#19C1B2</color>
+
+    <color name="windowBackground">@color/alice_blue</color>
+    <color name="darkBackground">#424242</color>
+    <color name="drawerBackground">#FFfafafa</color>
+    <color name="rowBackground">#F2F2F2</color>
+
+    <color name="colorInfo">#eeeeee</color>
+    <color name="colorInfoPressed">#BDBDBD</color>
+    <color name="colorSuccess">#4CAF50</color>
+    <color name="colorSuccessPressed">#2E7D32</color>
+    <color name="colorAlert">#FF3D00</color>
+    <color name="colorAlertPressed">#DD2C00</color>
+    <color name="colorWarning">#FF9100</color>
+    <color name="colorWarningPressed">#FF6D00</color>
+
+    <color name="float_transparent">#00000000</color>
+
+    <!-- colors -->
+    <color name="background_color">#FFFFFF</color>
+    <color name="colorNormal">#64b5f6</color>
+    <color name="colorNormalPressed">#1e88e5</color>
+    <color name="colorTitle">#575757</color>
+    <color name="colorContent">#797979</color>
+    <color name="success_stroke_color">#A5DC86</color>
+
+    <color name="blue_main_background">#2B60FF</color>
+    <color name="green_main_background">#4DBA11</color>
+
+
+    <color name="malibu">#6AB1F2</color>
+    <color name="alice_blue">#FCFEFF</color>
+    <color name="solitude">#DDE5F2</color>
+    <color name="sante_fe">#AD6B4B</color>
+    <color name="floral_white">#FFF9EC</color>
+    <color name="westar">#D8D2C7</color>
+
+    <!-- petalos -->
+    <color name="pink">#F74FC3</color>
+    <color name="pinkDark">#C7018C</color>
+    <color name="magenda">#FD3868</color>
+    <color name="magendaDark">#AE002D</color>
+    <color name="orange">#FFA701</color>
+    <color name="orangeDark">#E03C00</color>
+    <color name="red">#C4021C</color>
+    <color name="redDark">#760010</color>
+
+</resources>

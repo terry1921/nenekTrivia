@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nenek Trivia</string>
+    <string name="popup_button_cancel">Cancel</string>
+    <string name="popup_button_accept">Accept</string>
+    <string name="title_honor">Wall Of Fame</string>
+    <string name="error_login_fb">An error occurred when logging in with Facebook.\\nWait a moment and try again.</string>
+    <string name="error_login_tw">An error occurred when logging in with Twitter.\\nWait a moment and try again.</string>
+    <string name="menu_profile">MY PROFILE</string>
+    <string name="menu_home">HOME</string>
+    <string name="menu_honor">WALL OF FAME</string>
+    <string name="menu_help">HELP</string>
+    <string name="menu_exit">EXIT</string>
+    <string name="menu_back">BACK</string>
+    <string name="menu_promotions">ADVERTISING</string>
+    <string name="title_game">Questions</string>
+    <string name="title_promotions">Advertising</string>
+    <string name="title_help">Help</string>
+    <string name="title_lose">You lose!</string>
+    <string name="title_profile">Profile</string>
+    <string name="login">Login</string>
+    <string name="trophy">Trophy</string>
+    <string name="home_button_play">Play</string>
+    <string name="label_best_points">Best Score</string>
+    <string name="warning_exit">Notification</string>
+    <string name="content_exit">Are you sure you want to exit the game?\\nThe data will not be saved.</string>
+    <string name="error_load_data">There was an error loading the data.</string>
+    <string name="correct">"Correct "</string>
+    <string name="incorrect">"Incorrect "</string>
+    <string name="end_game_text">No more questions available,\\nwait for our update or start a new game</string>
+    <string name="under_construction">Under construction</string>
+    <string name="point_gain_1">You have obtained</string>
+    <string name="point_gain_2">points</string>
+    <string name="next_question">Next question</string>
+    <string name="no_connection_title">No Internet connection</string>
+    <string name="no_connection_content">You are not connected to the internet.\\nMake sure WI-FI is on,\\nAirplane mode is off and try again.</string>
+    <string name="no_content_title">No content available</string>
+    <string name="no_content_content">At the moment there is no content available, it will soon be added.</string>
+    <string name="place">place</string>
+    <string name="play_again">Play again</string>
+    <string name="exit_dialog">Exit</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nenek Trivia</string>
+    <string name="popup_button_cancel">Cancelar</string>
+    <string name="popup_button_accept">Aceptar</string>
+    <string name="title_honor">Cuadro de honor</string>
+    <string name="error_login_fb">Ocurrió un error al ingresar con Facebook\n Espere un momento e intente de nuevo.</string>
+    <string name="error_login_tw">Ocurrió un error al ingresar con Twitter\n Espere un momento e intente de nuevo.</string>
+    <string name="menu_profile">MI PERFIL</string>
+    <string name="menu_home">INICIO</string>
+    <string name="menu_honor">CUADRO DE HONOR</string>
+    <string name="menu_promotions">PROMOCIONES</string>
+    <string name="menu_help">AYUDA</string>
+    <string name="menu_exit">SALIR</string>
+    <string name="menu_back">REGRESAR</string>
+    <string name="title_game">Preguntas</string>
+    <string name="title_promotions">Promociones</string>
+    <string name="title_help">Ayuda</string>
+    <string name="title_lose">¡Has perdido!</string>
+    <string name="title_profile">Perfil</string>
+    <string name="login">Acceder</string>
+    <string name="trophy">Trofeo</string>
+    <string name="home_button_play">Jugar</string>
+    <string name="label_best_points">Mayor puntaje</string>
+    <string name="warning_exit">Aviso</string>
+    <string name="content_exit">¿Está seguro que desea salir del juego?\nLos datos no se guardarán.</string>
+    <string name="error_load_data">Ocurrió un error al cargar los datos.</string>
+    <string name="correct">Correcto</string>
+    <string name="incorrect">Incorrecto</string>
+    <string name="end_game_text">No hay mas preguntas disponibles, espera nuestra actualización o comienza un nuevo juego</string>
+    <string name="under_construction">En construcción</string>
+    <string name="point_gain_1">Has obtenido</string>
+    <string name="point_gain_2">puntos</string>
+    <string name="next_question">Siguiente pregunta</string>
+    <string name="no_connection_title">Sin conexión a Internet</string>
+    <string name="no_connection_content">No estás conectado a internet.\nAsegúrate de que WI-FI esté encendido,\nel modo Avión esté apagado y vuelve a intentarlo.</string>
+    <string name="no_content_title">No hay contenido disponible</string>
+    <string name="no_content_content">Por el momento no hay contenido disponible,\npronto se agregará.</string>
+    <string name="place">lugar</string>
+    <string name="play_again">Volver a jugar</string>
+    <string name="exit_dialog">Salir</string>
+</resources>

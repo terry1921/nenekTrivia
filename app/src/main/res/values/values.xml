@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--notify -->
+    <string name="notify_content" translatable="false">Item</string>
+    <dimen name="notify_text_content">14sp</dimen>
+    <dimen name="notify_margin">16dp</dimen>
+    <dimen name="notify_padding">16dp</dimen>
+    <dimen name="notify_elevation">6dp</dimen>
+    <dimen name="notify_corner_radius">6dp</dimen>
+
+    <!-- popup -->
+    <dimen name="popup_common_circle_width">3dp</dimen>
+    <dimen name="popup_progress_circle_radius">34dp</dimen>
+    <dimen name="popup_width">290dp</dimen>
+    <dimen name="popup_padding_main">10dp</dimen>
+    <dimen name="popup_width_image">53dp</dimen>
+    <dimen name="popup_height_image">53dp</dimen>
+    <dimen name="popup_margin_top_image">5dp</dimen>
+    <dimen name="popup_margin_top_progress">9dp</dimen>
+    <dimen name="popup_margin_top_title">10dp</dimen>
+    <dimen name="popup_margin_top_content">10dp</dimen>
+    <dimen name="popup_margin_top_buttons">10dp</dimen>
+    <dimen name="popup_margin_right_cancel_button">10dp</dimen>
+    <dimen name="popup_text_title">19sp</dimen>
+    <dimen name="popup_text_content">14sp</dimen>
+    <string name="popup_button_cancel">Cancelar</string>
+    <string name="popup_button_accept">Aceptar</string>
+    <string name="popup_title" translatable="false">Título</string>
+    <string name="popup_content" translatable="false">Este es un mensaje</string>
+
+</resources>

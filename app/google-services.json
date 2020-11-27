@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "458676168606",
+    "firebase_url": "https://nenek-trivia.firebaseio.com",
+    "project_id": "nenek-trivia",
+    "storage_bucket": "nenek-trivia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458676168606:android:0bd40ac5ef976a7d",
+        "android_client_info": {
+          "package_name": "com.fenixarts.nenektrivia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458676168606-ld46b3ej7gcbp56m42j87oc76c7p4m53.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fenixarts.nenektrivia",
+            "certificate_hash": "2f1d6522b6f41f3c355369a14e263c9d6b383753"
+          }
+        },
+        {
+          "client_id": "458676168606-1cl772ijqckildsm7ah0uaodhsp8ibfp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9oaJ1UfXIUIKuJzaB2RcdV4LRCrawdKE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458676168606-1cl772ijqckildsm7ah0uaodhsp8ibfp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458676168606:android:599d7e982b6b4cbf",
+        "android_client_info": {
+          "package_name": "com.fenixarts.nenektrivia.mock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458676168606-1cl772ijqckildsm7ah0uaodhsp8ibfp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9oaJ1UfXIUIKuJzaB2RcdV4LRCrawdKE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

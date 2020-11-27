@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <!--<item
+            android:id="@+id/action_profile"
+            android:icon="@drawable/ic_person"
+            andrmTitleViewitle="@string/menu_profile" />-->
+
+        <item
+            android:id="@+id/action_home"
+            android:icon="@drawable/ic_home"
+            android:checked="true"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/action_points"
+            android:icon="@drawable/ic_star"
+            android:title="@string/menu_honor" />
+
+        <item
+            android:id="@+id/action_promotions"
+            android:icon="@drawable/ic_loyalty"
+            android:tint="@android:color/black"
+            android:title="@string/menu_promotions" />
+
+        <!--<item
+            android:id="@+id/action_help"
+            android:icon="@drawable/ic_help"
+            android:title="@string/menu_help" />-->
+
+        <item
+            android:id="@+id/action_exit"
+            android:icon="@drawable/ic_close"
+            android:title="@string/menu_exit" />
+
+    </group>
+
+</menu>
