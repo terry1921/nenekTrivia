@@ -115,6 +115,7 @@
             android:layout_weight="6"
             app:layoutManager="LinearLayoutManager"
             tools:listitem="@layout/row_answers"
+            tools:itemCount="4"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginStart="50dp"

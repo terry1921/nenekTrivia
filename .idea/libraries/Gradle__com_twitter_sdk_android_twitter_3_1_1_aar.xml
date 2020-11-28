@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.twitter.sdk.android:twitter:3.1.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/32e23c3c6f362e1ddbbff81333389e51/twitter-3.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b6399090838cd440e7a5e91f3ab242fa/twitter-3.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f9940aa219c9dd74da9c65007c7868c5/twitter-3.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/63b95c51d5eddf0701a53abb9ff37601/twitter-3.1.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b6399090838cd440e7a5e91f3ab242fa/twitter-3.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b6399090838cd440e7a5e91f3ab242fa/twitter-3.1.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.twitter.sdk.android/twitter/3.1.1/523e6f0bd609c3427b8b1b2cb74bd26a701ab50c/twitter-3.1.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.twitter.sdk.android/twitter/3.1.1/523e6f0bd609c3427b8b1b2cb74bd26a701ab50c/twitter-3.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

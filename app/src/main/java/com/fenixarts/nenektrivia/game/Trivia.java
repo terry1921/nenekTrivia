@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.fenixarts.nenektrivia.BuildConfig;
 import com.fenixarts.nenektrivia.R;
 import com.fenixarts.nenektrivia.game.domain.adapters.QuestionAdapter;
 import com.fenixarts.nenektrivia.game.domain.models.Answers;
@@ -19,6 +20,9 @@ import com.fenixarts.nenektrivia.utils.Injection;
 import com.fenixarts.nenektrivia.utils.NenekDialog;
 import com.fenixarts.nenektrivia.utils.Notify;
 import com.fenixarts.nenektrivia.utils.Print;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.List;
 import java.util.Locale;
@@ -44,6 +48,7 @@ public class Trivia extends AppCompatActivity implements GameContract.View, Ques
     private TextView mAnswerCounterView;
     private CountDownTimer countDownTimer;
     private static boolean isOnBackground = false;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +59,38 @@ public class Trivia extends AppCompatActivity implements GameContract.View, Ques
         isOnBackground = false;
         initView();
 
+        mInterstitialAd = new InterstitialAd(this);
+        if (BuildConfig.DEBUG) {
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstitial_id_debug));
+        } else {
+            mInterstitialAd.setAdUnitId(BuildConfig.LKD_2);
+        }
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        mInterstitialAd.setAdListener(new AdListener(){
+            @Override
+            public void onAdFailedToLoad(int i) {
+                super.onAdFailedToLoad(i);
+                presenter.onDestroy();
+            }
+
+            @Override
+            public void onAdClicked() {
+                super.onAdClicked();
+                presenter.onDestroy();
+            }
+
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+                presenter.onDestroy();
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                super.onAdLeftApplication();
+                presenter.onDestroy();
+            }
+        });
     }
 
     private void initView() {
@@ -264,7 +301,11 @@ public class Trivia extends AppCompatActivity implements GameContract.View, Ques
         dialog.setCancelClickListener(new DialogLose.OnClickListener() {
             @Override
             public void onClick(DialogLose view) {
-                presenter.onDestroy();
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {
+                    presenter.onDestroy();
+                }
                 view.dismiss();
             }
         });
