@@ -63,7 +63,7 @@ public class Trivia extends AppCompatActivity implements GameContract.View, Ques
         if (BuildConfig.DEBUG) {
             mInterstitialAd.setAdUnitId(getString(R.string.admob_interstitial_id_debug));
         } else {
-            mInterstitialAd.setAdUnitId(BuildConfig.LKD_2);
+            mInterstitialAd.setAdUnitId(getString(R.string.admob_interstitial_id_release));
         }
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         mInterstitialAd.setAdListener(new AdListener(){

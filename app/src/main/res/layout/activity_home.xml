@@ -39,7 +39,8 @@
         app:layout_constraintRight_toRightOf="parent"
         ads:layout_constraintBottom_toBottomOf="parent"
         ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/admob_banner_id_debug">
+        ads:adUnitId="@string/admob_banner_id_release">
+        <!-- TODO change to test -->
 
     </com.google.android.gms.ads.AdView>
 

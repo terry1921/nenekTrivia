@@ -12,7 +12,9 @@
     <!-- admob -->
     <string name="admob_app_id" translatable="false">ca-app-pub-1315135593817782~2048202393</string>
     <string name="admob_banner_id_debug" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_banner_id_release" translatable="false">ca-app-pub-1315135593817782/6839679864</string>
     <string name="admob_interstitial_id_debug" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_interstitial_id_release" translatable="false">ca-app-pub-1315135593817782/5708245803</string>
 
     <!-- error login api -->
     <string name="error_login_fb" tools:ignore="Typos">"Ocurrió un error al ingresar con Facebook\n Espere un momento e intente de nuevo."</string>

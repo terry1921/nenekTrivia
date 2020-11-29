@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import com.fenixarts.nenektrivia.BuildConfig;
 import com.fenixarts.nenektrivia.R;
 import com.fenixarts.nenektrivia.game.LoadGameSplash;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 
 /**
@@ -53,7 +55,6 @@ public class MainFragment extends Fragment {
 
         /* set Actions */
         AdRequest adRequest = new AdRequest.Builder().build();
-        if (!BuildConfig.DEBUG) mAdView.setAdUnitId(BuildConfig.LKD_1);
         mAdView.loadAd(adRequest);
     }
 
