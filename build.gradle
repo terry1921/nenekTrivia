@@ -10,10 +10,9 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.0'
+        classpath 'com.android.tools.build:gradle:4.1.0'
         classpath 'com.google.gms:google-services:3.1.0'
         classpath 'com.google.firebase:firebase-plugins:1.1.5'
-        classpath 'io.fabric.tools:gradle:1.31.2'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -48,4 +47,5 @@ ext {
     mockitoVersion = '1.10.19'
     powerMockito = '1.6.4'
     firebaseVersion = '11.8.0'
+    var = '../.signing/rockstars.jks'
 }

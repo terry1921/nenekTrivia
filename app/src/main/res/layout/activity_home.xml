@@ -9,13 +9,15 @@
     android:background="@drawable/main_background">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:contentDescription="@string/app_name"
         android:scaleType="centerInside"
         android:src="@drawable/background_home"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="parent"
+        ads:layout_constraintBottom_toTopOf="@+id/adView"/>
 
     <Button
         android:id="@+id/play_button"
@@ -31,13 +33,14 @@
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         ads:layout_constraintBottom_toBottomOf="parent"
         ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/admob_banner_id_debug">
+        ads:adUnitId="@string/admob_banner_id_release">
+        <!-- TODO change to test -->
 
     </com.google.android.gms.ads.AdView>
 

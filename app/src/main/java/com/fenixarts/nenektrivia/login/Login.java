@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.crashlytics.android.Crashlytics;
-import com.crashlytics.android.answers.Answers;
-import com.crashlytics.android.answers.LoginEvent;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -146,27 +143,11 @@ public class Login extends BaseActivity implements LoginContract.View {
         if (null != currentUser) {
             Print.i("updateUI:OK Session");
             Print.d(String.format("email=[%s] - userId=[%s]", currentUser.getEmail(),currentUser.getUid()));
-            logUser(currentUser);
             startActivity(new Intent(this,MainActivity.class));
             finish();
         } else {
             Print.i("updateUI:NO Session");
         }
-    }
-
-    private void logUser(FirebaseUser currentUser) {
-        // You can call any combination of these three methods
-        Crashlytics.setUserIdentifier(currentUser.getUid());
-        Crashlytics.setUserEmail(currentUser.getEmail());
-        Crashlytics.setUserName(currentUser.getDisplayName());
-
-        Answers.getInstance().logLogin(new LoginEvent()
-                .putMethod("Google")
-                .putSuccess(true)
-                .putCustomAttribute("Uid",currentUser.getUid())
-                .putCustomAttribute("Email",currentUser.getEmail())
-                .putCustomAttribute("Name",currentUser.getDisplayName()));
-
     }
 
     @Override

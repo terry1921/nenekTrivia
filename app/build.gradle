@@ -1,47 +1,33 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.firebase.firebase-perf'
-apply plugin: 'io.fabric'
 
 android {
     signingConfigs {
         firma {
             keyAlias 'rockstars'
             keyPassword '123456'
-            storeFile file('/Users/eespinosa/Projects/rockstars.jks')
+            storeFile file(var)
             storePassword '123456'
         }
     }
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion 29
+    buildToolsVersion '27.0.3'
     defaultConfig {
         multiDexEnabled true
         applicationId "com.fenixarts.nenektrivia"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 5
-        versionName "1.0.1"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 8
+        versionName "1.0.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
-        tst{
-            debuggable true
-            jniDebuggable false
-            renderscriptDebuggable false
-            renderscriptOptimLevel 3
-            zipAlignEnabled true
-            signingConfig signingConfigs.firma
-        }
         debug {
-            minifyEnabled true
             debuggable true
             jniDebuggable false
             renderscriptDebuggable false
             renderscriptOptimLevel 3
             zipAlignEnabled true
-            // Uses new built-in shrinker http://tools.android.com/tech-docs/new-build-system/built-in-shrinker
-            shrinkResources true
-            useProguard true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.firma
         }
         release {
@@ -61,36 +47,7 @@ android {
     buildTypes.each {
         it.buildConfigField 'String', 'DATABASE_NAME', '"NenekTrivia.db"'
         it.buildConfigField 'String', 'LKD_1', "\"$UnitId\""
-    }
-    flavorDimensions "develop"
-    productFlavors {
-        prod {
-            dimension "develop"
-            signingConfig signingConfigs.firma
-            versionName '1.0.1'
-        }
-        alpha {
-            dimension "develop"
-            signingConfig signingConfigs.firma
-            versionName '0.0.3'
-        }
-        beta {
-            dimension "develop"
-            signingConfig signingConfigs.firma
-            versionName '0.0.1'
-        }
-        mock {
-            dimension "develop"
-            versionName '0.0.1'
-        }
-    }
-
-    // Remove mockRelease as it's not needed.
-    android.variantFilter { variant ->
-        if (variant.buildType.name == 'release'
-                && variant.getFlavors().get(0).name == 'mock') {
-            variant.setIgnore(true)
-        }
+        it.buildConfigField 'String', 'LKD_2', "\"$UnitId2\""
     }
 
     // Always show the result of every unit test, even if it passes.
@@ -107,62 +64,56 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     /* google support */
-    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:support-compat:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:percent:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:support-vector-drawable:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:support-core-utils:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:appcompat-v7:27.0.2"
+    implementation "com.android.support:support-compat:27.0.2"
+    implementation "com.android.support:cardview-v7:27.0.2"
+    implementation "com.android.support:recyclerview-v7:27.0.2"
+    implementation "com.android.support:support-annotations:27.0.2"
+    implementation "com.android.support:design:27.0.2"
+    implementation "com.android.support:percent:27.0.2"
+    implementation "com.android.support:support-vector-drawable:27.0.2"
+    implementation "com.android.support:support-v4:27.0.2"
+    implementation "com.android.support:support-core-utils:27.0.2"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.android.support:multidex:1.0.3'
 
     /* firebase */
-    implementation "com.google.firebase:firebase-auth:$rootProject.firebaseVersion"
-    implementation "com.google.firebase:firebase-database:$rootProject.firebaseVersion"
-    implementation "com.google.firebase:firebase-core:$rootProject.firebaseVersion"
-    implementation "com.google.firebase:firebase-crash:$rootProject.firebaseVersion"
-    implementation "com.google.firebase:firebase-ads:$rootProject.firebaseVersion"
-    implementation "com.google.firebase:firebase-perf:$rootProject.firebaseVersion"
-    implementation('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') {
-        transitive = true
-    }
-    compile('com.crashlytics.sdk.android:answers:1.4.1@aar') {
-        transitive = true
-    }
+    implementation "com.google.firebase:firebase-auth:11.8.0"
+    implementation "com.google.firebase:firebase-database:11.8.0"
+    implementation "com.google.firebase:firebase-core:11.8.0"
+    implementation "com.google.firebase:firebase-crash:11.8.0"
+    implementation "com.google.firebase:firebase-ads:11.8.0"
+    implementation "com.google.firebase:firebase-perf:11.8.0"
 
     /* utils */
-    implementation "com.google.guava:guava:$rootProject.guavaVersion"
+    implementation "com.google.guava:guava:23.3-android"
     implementation 'com.google.code.gson:gson:2.8.0'
     implementation 'com.pnikosis:materialish-progress:1.7'
     implementation 'com.wang.avi:library:2.1.3'
     implementation 'com.facebook.android:facebook-login:4.30.0'
     implementation 'com.twitter.sdk.android:twitter:3.1.1'
     implementation 'com.squareup.picasso:picasso:2.5.2'
-    implementation "com.google.android.gms:play-services-auth:$rootProject.firebaseVersion"
+    implementation "com.google.android.gms:play-services-auth:11.8.0"
     implementation 'com.airbnb.android:lottie:2.5.0-rc1'
     implementation 'de.hdodenhof:circleimageview:2.1.0'
 
     /* server */
-    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
-    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:2.3.0"
+    implementation "com.squareup.retrofit2:retrofit:2.3.0"
 
     /* Dependencies for local unit tests */
-    testImplementation "junit:junit:$rootProject.ext.junitVersion"
-    testImplementation "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
+    testImplementation "junit:junit:4.12"
+    testImplementation "org.mockito:mockito-all:1.10.19"
 
     /* Dependencies for Android unit tests */
-    androidTestImplementation "junit:junit:$rootProject.ext.junitVersion"
-    androidTestImplementation "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
+    androidTestImplementation "junit:junit:4.12"
+    androidTestImplementation "org.mockito:mockito-core:1.10.19"
 
     // Resolve conflicts between main and test APK:
-    androidTestImplementation "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
-    androidTestImplementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
-    androidTestImplementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
-    androidTestImplementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    androidTestImplementation "com.android.support:design:$rootProject.supportLibraryVersion"
+    androidTestImplementation "com.android.support:support-annotations:27.0.2"
+    androidTestImplementation "com.android.support:support-v4:27.0.2"
+    androidTestImplementation "com.android.support:recyclerview-v7:27.0.2"
+    androidTestImplementation "com.android.support:appcompat-v7:27.0.2"
+    androidTestImplementation "com.android.support:design:27.0.2"
 }
 apply plugin: 'com.google.gms.google-services'

@@ -47,13 +47,7 @@
         </activity>
         <activity android:name=".game.Trivia" />
         <activity android:name=".game.LoadGameSplash" />
-        <activity android:name=".main.MainActivity"
-            android:launchMode="singleTask"/>
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="beeafe3e56398bca2ff0b82ee8e1a0bc0f55621c" />
-        <meta-data android:name="firebase_crashlytics_collection_enabled"
-            android:value="false" />
+        <activity android:name=".main.MainActivity" android:launchMode="singleTask"/>
     </application>
 
 </manifest>
