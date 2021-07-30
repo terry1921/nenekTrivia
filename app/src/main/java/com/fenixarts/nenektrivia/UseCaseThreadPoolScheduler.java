@@ -2,7 +2,6 @@ package com.fenixarts.nenektrivia;
 
 import android.os.Handler;
 
-import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -18,20 +17,14 @@ public class UseCaseThreadPoolScheduler implements UseCaseScheduler {
 
     private static final int NUMBER_OF_CORES = Runtime.getRuntime().availableProcessors();
 
-    /*private static final int POOL_SIZE = 2;
-
-    private static final int MAX_POOL_SIZE = 4;*/
-
     private static final long TIMEOUT = 60;
 
-    private ThreadPoolExecutor mThreadPoolExecutor;
+    private final ThreadPoolExecutor mThreadPoolExecutor;
 
     UseCaseThreadPoolScheduler() {
-        /*mThreadPoolExecutor = new ThreadPoolExecutor(POOL_SIZE, MAX_POOL_SIZE, TIMEOUT,
-                TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(POOL_SIZE));*/
         mThreadPoolExecutor = new ThreadPoolExecutor(NUMBER_OF_CORES,
                 NUMBER_OF_CORES * 2, TIMEOUT, TimeUnit.SECONDS,
-                new LinkedBlockingQueue<Runnable>());
+                new LinkedBlockingQueue<>());
     }
 
     @Override
@@ -41,32 +34,17 @@ public class UseCaseThreadPoolScheduler implements UseCaseScheduler {
 
     @Override
     public <V extends UseCase.ResponseValues> void notifyResponse(final V response, final UseCase.UseCaseCallback<V> useCaseCallback) {
-        mHandler.post(new Runnable() {
-            @Override
-            public void run() {
-                useCaseCallback.onSuccess(response);
-            }
-        });
+        mHandler.post(() -> useCaseCallback.onSuccess(response));
     }
 
     @Override
     public <V extends UseCase.ResponseValues> void onError(final UseCase.UseCaseCallback<V> useCaseCallback) {
-        mHandler.post(new Runnable() {
-            @Override
-            public void run() {
-                useCaseCallback.onError();
-            }
-        });
+        mHandler.post(useCaseCallback::onError);
     }
 
     @Override
     public <V extends UseCase.ResponseValues> void onError(final V response, final UseCase.UseCaseCallback<V> useCaseCallback) {
-        mHandler.post(new Runnable() {
-            @Override
-            public void run() {
-                useCaseCallback.onError(response);
-            }
-        });
+        mHandler.post(() -> useCaseCallback.onError(response));
     }
 
 }

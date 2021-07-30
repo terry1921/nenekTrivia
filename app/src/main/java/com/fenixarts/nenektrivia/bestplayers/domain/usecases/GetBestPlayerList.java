@@ -1,7 +1,7 @@
 package com.fenixarts.nenektrivia.bestplayers.domain.usecases;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.fenixarts.nenektrivia.UseCase;
 import com.fenixarts.nenektrivia.bestplayers.domain.model.BestPlayersItem;

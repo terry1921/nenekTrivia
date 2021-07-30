@@ -1,6 +1,6 @@
 package com.fenixarts.nenektrivia.data.source;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.fenixarts.nenektrivia.bestplayers.domain.model.BestPlayersItem;
 import com.fenixarts.nenektrivia.bestplayers.domain.usecases.GetBestPlayerList;

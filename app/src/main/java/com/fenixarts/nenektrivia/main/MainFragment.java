@@ -2,19 +2,17 @@ package com.fenixarts.nenektrivia.main;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.fenixarts.nenektrivia.BuildConfig;
 import com.fenixarts.nenektrivia.R;
 import com.fenixarts.nenektrivia.game.LoadGameSplash;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 
 /**
@@ -36,7 +34,7 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.activity_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
         initView(view);
         return view;
     }

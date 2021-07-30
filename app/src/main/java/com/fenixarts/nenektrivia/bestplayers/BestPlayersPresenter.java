@@ -1,6 +1,6 @@
 package com.fenixarts.nenektrivia.bestplayers;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.fenixarts.nenektrivia.R;
 import com.fenixarts.nenektrivia.UseCase;

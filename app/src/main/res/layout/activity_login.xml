@@ -13,7 +13,7 @@
         android:contentDescription="@string/app_name"
         android:scaleType="centerCrop" />
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.fenixarts.nenektrivia.login.Login">
@@ -107,6 +107,6 @@
 
         </LinearLayout>
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>

@@ -5,7 +5,6 @@ package com.fenixarts.nenektrivia;
  * Created by terry0022 on 21/09/17 - 16:46.
  */
 
-@SuppressWarnings("unchecked")
 public class UseCaseHandler {
 
     /* constante de instancia */
@@ -22,14 +21,9 @@ public class UseCaseHandler {
             final UseCase<T, S> useCase, T values, UseCase.UseCaseCallback<S> useCaseCallback) {
 
         useCase.setRequestValues(values);
-        useCase.setUseCaseCallback(new UiCallbackWrapper(useCaseCallback, this));
+        useCase.setUseCaseCallback(new UiCallbackWrapper<>(useCaseCallback, this));
 
-        mUseCaseScheduler.execute(new Runnable() {
-            @Override
-            public void run() {
-                useCase.run();
-            }
-        });
+        mUseCaseScheduler.execute(useCase::run);
     }
 
     private static final class UiCallbackWrapper<V extends UseCase.ResponseValues> implements UseCase.UseCaseCallback<V> {

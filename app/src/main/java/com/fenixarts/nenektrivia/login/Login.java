@@ -87,12 +87,9 @@ public class Login extends BaseActivity implements LoginContract.View {
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         SignInButton mLoginGoogleButton = findViewById(R.id.login_google_button);
-        mLoginGoogleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-                startActivityForResult(signInIntent, RC_SIGN_IN);
-            }
+        mLoginGoogleButton.setOnClickListener(view -> {
+            Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+            startActivityForResult(signInIntent, RC_SIGN_IN);
         });
     }
 
@@ -143,11 +140,10 @@ public class Login extends BaseActivity implements LoginContract.View {
         if (null != currentUser) {
             Print.i("updateUI:OK Session");
             Print.d(String.format("email=[%s] - userId=[%s]", currentUser.getEmail(),currentUser.getUid()));
-            startActivity(new Intent(this,MainActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
             finish();
-        } else {
-            Print.i("updateUI:NO Session");
         }
+        Print.i("updateUI:NO Session");
     }
 
     @Override

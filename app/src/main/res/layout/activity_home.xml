@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -39,9 +39,9 @@
         app:layout_constraintRight_toRightOf="parent"
         ads:layout_constraintBottom_toBottomOf="parent"
         ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/admob_banner_id_release">
+        ads:adUnitId="@string/admob_banner_id_debug">
         <!-- TODO change to test -->
 
     </com.google.android.gms.ads.AdView>
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

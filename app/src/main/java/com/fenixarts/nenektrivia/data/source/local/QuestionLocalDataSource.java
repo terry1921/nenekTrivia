@@ -1,7 +1,7 @@
 package com.fenixarts.nenektrivia.data.source.local;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.fenixarts.nenektrivia.data.source.QuestionDataSource;
 import com.fenixarts.nenektrivia.data.source.QuestionRepository;

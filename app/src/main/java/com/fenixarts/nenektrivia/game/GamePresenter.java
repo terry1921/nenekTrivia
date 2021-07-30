@@ -1,6 +1,6 @@
 package com.fenixarts.nenektrivia.game;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.fenixarts.nenektrivia.UseCase;
 import com.fenixarts.nenektrivia.UseCaseHandler;

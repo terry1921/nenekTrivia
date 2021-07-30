@@ -1,7 +1,7 @@
 package com.fenixarts.nenektrivia.login;
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.facebook.AccessToken;
 import com.fenixarts.nenektrivia.utils.Print;

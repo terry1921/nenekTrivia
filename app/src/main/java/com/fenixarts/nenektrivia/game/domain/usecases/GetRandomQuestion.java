@@ -1,6 +1,6 @@
 package com.fenixarts.nenektrivia.game.domain.usecases;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.fenixarts.nenektrivia.UseCase;
 import com.fenixarts.nenektrivia.data.source.QuestionDataSource;
